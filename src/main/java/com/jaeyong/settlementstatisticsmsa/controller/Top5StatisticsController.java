@@ -29,7 +29,6 @@ public class Top5StatisticsController {
 
         LocalDate today = LocalDate.parse(date); // String → LocalDate 변환
         List<Top5Statistics> top5 = top5StatisticsService.getTop5Statistics(dateType, today, staticType);
-        System.out.println("조회된 Top5 개수: " + top5.size());
 
         return ResponseEntity.ok(top5);
     }

@@ -25,8 +25,7 @@ public class SettlementController {
             @PathVariable Long videoId,
             @PathVariable String dateType,
             @PathVariable String date) {
-        System.out.println("Received dateType: " + dateType);  // 로그 추가
-        System.out.println("Received date: " + date);  // 로그 추가
+
         LocalDate startDate = LocalDate.parse(date);
         List<SettlementResult> settlementList = settlementService.getSettlement(videoId, dateType, startDate);
 
