@@ -26,6 +26,7 @@ public class SettlementController {
             @PathVariable String dateType,
             @PathVariable String date) {
 
+        System.out.println("로드밸런싱 확인");
         LocalDate startDate = LocalDate.parse(date);
         List<SettlementResult> settlementList = settlementService.getSettlement(videoId, dateType, startDate);
 
