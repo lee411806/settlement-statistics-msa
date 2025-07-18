@@ -9,4 +9,7 @@ import java.util.List;
 
 public interface Top5StatisticsRepository extends JpaRepository<Top5Statistics, Long> {
     List<Top5Statistics> findTop5ByDateTypeAndStartDateBetweenAndStaticTypeOrderByValueDesc(String dateType, LocalDate start, LocalDate end, String staticType);
+
+
+    List<Top5Statistics> findByStaticType(String staticType);
 }
